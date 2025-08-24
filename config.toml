@@ -1,2 +1,3 @@
 webpage = "https://www.avantorsciences.com/fr/fr/"
-delay_get_url = 10
+delay_get_url = 10  # seconds
+cache_use = false
