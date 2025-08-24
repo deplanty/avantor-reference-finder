@@ -36,7 +36,7 @@ class Application:
             reference (str): The reference number of the product.
         """
 
-        if reference in self.cache:
+        if self.config["cache_use"] and reference in self.cache:
             url = self.cache[reference]
         else:
             url = self.find_url(reference)
@@ -90,3 +90,4 @@ if __name__ == "__main__":
         app.get_url(reference)
     app.open_all_url()
     app.save_cache()
+
